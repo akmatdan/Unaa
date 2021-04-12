@@ -5,7 +5,7 @@ function HomeMap() {
     return (
         <View style={{
             height: 300, 
-            backgroundColor: '#fff232',
+            backgroundColor: '#99a6f8',
             justifyContent: 'center',
             alignItems: 'center'}}>
             <Text>I am a map</Text>
