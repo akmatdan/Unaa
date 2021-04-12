@@ -1,13 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native'
-import HomeMap from '../../components/HomeMap'
+import styles from './styles'
+import RouteMap from '../../components/RouteMap'
 import UberTypes from '../../components/UberTypes'
-
 
 const SearchResults = () => {
   return (
     <View>
-    <HomeMap />
+    <RouteMap />
     <UberTypes />
     </View>
   );
