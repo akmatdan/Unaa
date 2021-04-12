@@ -13,6 +13,7 @@
     "react": "17.0.1",
     "react-native": "0.64.0",
     "react-native-google-places-autocomplete": "^2.2.0",
+    "react-native-places-input": "^1.1.7",
     "react-native-vector-icons": "^8.1.0"
   },
   "devDependencies": {

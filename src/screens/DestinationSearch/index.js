@@ -7,6 +7,7 @@ import styles from './styles.js';
 const DestinationSearch = (props) => {
   const [originPlace, setOriginPlace] = useState(null);
   const [destinationPlace, setDestinationPlace] = useState(null);
+  
 
   useEffect(() => {
     console.warn('useEffect is called');
@@ -29,9 +30,10 @@ const DestinationSearch = (props) => {
           }}
           fetchDetails
           query={{
-            key: 'AIzaSyDkA85Yi77JPkLvn75lx_EULxpMs2Krn7w',
+            key: 'AIzaSyC-EbiulXUhueCIFOtXkZngLOaCCq4DU9E',
             language: 'en',
           }}
+          onFail={error => console.error(error)}
         />
 
         <GooglePlacesAutocomplete
@@ -44,7 +46,7 @@ const DestinationSearch = (props) => {
           }}
           fetchDetails
           query={{
-            key: 'AIzaSyDkA85Yi77JPkLvn75lx_EULxpMs2Krn7w',
+            key: 'AIzaSyC-EbiulXUhueCIFOtXkZngLOaCCq4DU9E',
             language: 'en',
           }}
         />
