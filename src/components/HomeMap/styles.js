@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native'
+import cars from '../../assets/data/cars'
 
 const styles = StyleSheet.create({
   map: {
@@ -7,12 +8,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
     },
-
-  car: {
-    width: 70,
-    height: 70,
-    resizeMode: 'contain'
-  },
 })
 
 export default styles
