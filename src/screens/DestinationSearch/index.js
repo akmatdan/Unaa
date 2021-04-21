@@ -24,7 +24,10 @@ const DestinationSearch = (props) => {
   useEffect(() => {
     console.warn('useEffect is called');
     if (originPlace && destinationPlace) {
-      navigation.navigate('SearchResults')
+      navigation.navigate('SearchResults', {
+        originPlace,
+        destinationPlace,
+      })
     }
   }, [originPlace, destinationPlace]);
 
