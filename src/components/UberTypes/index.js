@@ -13,7 +13,7 @@ const UberTypes = () => {
   return (
     <View>
       {typesData.map((type) => ( 
-        <UberTypesRow type={type}/>
+        <UberTypesRow type={type} key={type.id}/>
       ))}
       
       <Pressable onPress={confirm} style={styles.button}>
