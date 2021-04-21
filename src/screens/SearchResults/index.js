@@ -6,7 +6,7 @@ import UberTypes from '../../components/UberTypes'
 
 const SearchResults = () => {
   return (
-    <View>
+    <View style={styles.container}>
     <RouteMap />
     <UberTypes />
     </View>
