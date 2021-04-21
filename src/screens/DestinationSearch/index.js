@@ -1,9 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import {View, TextInput, SafeAreaView} from 'react-native';
 import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
-import PlaceRow from './PlaceRow'
 
+import PlaceRow from './PlaceRow'
 import styles from './styles.js';
+
+const homePlace = {
+  description: 'Home',
+  geometry: { location: { lat: 48.8152937, lgn: 2.4597665 } },
+};
+const workPlace = {
+  description: 'Work',
+  geometry: { location: { lat: 48.8496818, lng: 2.2940881 } },
+};
 
 const DestinationSearch = (props) => {
   const [originPlace, setOriginPlace] = useState(null);
@@ -28,6 +37,8 @@ const DestinationSearch = (props) => {
           }}
           enablePoweredByContainer={false} 
           suppressDefaultStyles
+          currentLocation={true}
+          currentLocationLabel='Current location'
           styles={{
             textInput: styles.textInput,
             container: styles.autocompleteContainer,
@@ -40,6 +51,8 @@ const DestinationSearch = (props) => {
             language: 'en',
           }}
           renderRow={(data) => <PlaceRow data={data} />}
+          renderDescription={(data) => data.description || data.vicinity}
+          predefinedPlaces={[homePlace, workPlace]}
         />
 
         <GooglePlacesAutocomplete

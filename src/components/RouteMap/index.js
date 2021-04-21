@@ -22,6 +22,7 @@ const RouteMap = (props) => {
     <MapView
       style={styles.map}
       provider={PROVIDER_GOOGLE}
+      showsUserLocation={true}
       initialRegion={{
         latitude: 28.450627,
         longitude: -16.263045,
