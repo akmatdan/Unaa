@@ -41,7 +41,7 @@ const DestinationSearch = (props) => {
         <GooglePlacesAutocomplete
           placeholder="Where from?"
           onPress={(data, details = null) => {
-            setOriginPlace({data, details});
+            setOriginPlace({data, details},);
           }}
           enablePoweredByContainer={false} 
           suppressDefaultStyles
@@ -66,7 +66,7 @@ const DestinationSearch = (props) => {
         <GooglePlacesAutocomplete
           placeholder="Where to?"
           onPress={(data, details = null) => {
-            setDestinationPlace({data, details});
+            setDestinationPlace({data, details},);
           }}
           enablePoweredByContainer={false}
           suppressDefaultStyles
