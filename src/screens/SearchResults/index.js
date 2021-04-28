@@ -6,14 +6,15 @@ import styles from './styles'
 import RouteMap from '../../components/RouteMap'
 import UberTypes from '../../components/UberTypes'
 
-const SearchResults = () => { 
-
+const SearchResults = (props) => { 
   const route = useRoute();
+
   console.log(route.params)
+  const {originPlace, destinationPlace} = route.params 
 
   return (
     <View style={styles.container}>
-    <RouteMap />
+    <RouteMap origin={originPlace} destination={destinationPlace} />
     <UberTypes />
     </View>
   );

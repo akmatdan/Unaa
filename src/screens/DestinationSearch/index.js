@@ -8,7 +8,7 @@ import styles from './styles.js';
 
 const homePlace = {
   description: 'Home',
-  geometry: { location: { lat: 48.8152937, lgn: 2.4597665 } },
+  geometry: { location: { lat: 48.8152937, lng: 2.4597668 } },
 };
 const workPlace = {
   description: 'Work',

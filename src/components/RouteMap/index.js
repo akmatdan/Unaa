@@ -7,16 +7,17 @@ import styles from './styles'
 
 const GOOGLE_MAPS_APIKEY = 'AIzaSyC-EbiulXUhueCIFOtXkZngLOaCCq4DU9E'
 
-const RouteMap = (props) => {
+const RouteMap = ({ origin, destination }) => {
 
-  const origin = {
-    latitude: 28.469637,
-    longitude: -16.265045,
-  }
-  const destination = {
-    latitude: 28.450527,
-    longitude: -16.270045,
-  }
+  const originLoc = {
+    latitude: origin.details.geometry.location.lat,
+    longitude: origin.details.geometry.location.lng,
+  };
+
+  const destinationLoc = {
+    latitude: destination.details.geometry.location.lat,
+    longitude: destination.details.geometry.location.lng,
+  };
 
   return (
     <MapView
@@ -31,8 +32,8 @@ const RouteMap = (props) => {
       }}>
 
       <MapViewDirections
-        origin={origin}
-        destination={destination}
+        origin={originLoc}
+        destination={destinationLoc}
         apikey={GOOGLE_MAPS_APIKEY}
         strokeWidth={5}
         strokeColor="black"
